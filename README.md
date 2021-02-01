@@ -26,7 +26,7 @@ Přiřazení probíhá následovně:
 ```a=(funkce, nebo proměnná)```, například: ```a=b```, nebo ```a=sin(x)```
 
 Lze taky přistupovat k barvám (stupním šedi) ostatních pixelů pomocí hranatých závorek:
-```a=\[-1,-4]```
+```a=[-1,-4]```
 přiřadí do hodnoty a hodnotu pixelu, který se nachází o 1 px vlevo a 4 px nahoru.
 
 Upozornění!
@@ -59,10 +59,10 @@ Poznámka: nechávejte mezeru mezi proměnnou a operátorem, aby si program nemy
 Program také umí základní počítání, tj. + - \* / a %. Použít ho můžete následovně:
 ```
 a=x%2
-f=2-y\*c
-d=(e\*e)-4
+f=2-y*c
+d=(e*e)-4
 ```
-K tomuto se váže další omezení. Prosím používejte operátory „v rámci jedněch závorek“. Program funguje tak, že rozdělí vstupní instrukci podle operátoru, což může vněkterých případech (třeba ```a=sin(x\*4)-y\*2```) vyhodit chybu. Prosím rozepište vtakovýchto případech instrukce na více řádků.
+K tomuto se váže další omezení. Prosím používejte operátory „v rámci jedněch závorek“. Program funguje tak, že rozdělí vstupní instrukci podle operátoru, což může vněkterých případech (třeba ```a=sin(x*4)-y*2```) vyhodit chybu. Prosím rozepište vtakovýchto případech instrukce na více řádků.
 
 ### Souřadnice
 Program stále podporuje souřadnicový systém a referování na ostatní pixely. Nicméně nefunguje spolehlivě (prosím nepoužívat). Syntax je následující:
@@ -71,4 +71,32 @@ a=[-1;0]
 ```
 Tento kód vezme odstín šedi nalevo a uloží ho do proměnné a.
 
+### Chyby
+Mimo dříve vyjmenované chyby a nesrovnalosti umí program vypisovat chybová hlášení. Ty se ukládají stejně jako obrázek do stejné složky, ve které je umístěn program, do souboru Crash.txt. Program vypisuje chyby až po provedení všech instrukcí a zapsání obrázku, takže pokud si chcete ověřit správnost instrukcí, doporučuji rozlišení 10x10 a spustit kód.
+
+### Ukázky
+```
+a=x
+if(y%2)
+a=0
+if(y%5)
+a=(255-x)
+if(y%7)
+a=(255-y)
+```
+
+```
+a=0
+if(x%2)
+a=x
+if(y%2)
+a=y
+```
+
+```
+c=x*y
+a=255*sin(c)
+if(x%2)
+a=s
+if(y%2)a=s
 ```
