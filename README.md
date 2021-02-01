@@ -15,9 +15,13 @@ Na každý řádek se dá dát jen jedna instrukce. Řádky by neměly obsahovat
 
 ### Proměnné
 ```a``` – Nastaví na konci instrukcí pixel na tento odstín šedi
-```b``` –Podivná proměnná, sám přesně nevím, jak funguje, souvisí spřeskakováním řádků u funkce if, prosím nepoužívat. Měl by fungovat tak, že pokud nastavíte b na 1, jeden řádek se přeskočí
-```c, d, e, f``` – Proměnné volné kpoužití.
+
+```b``` – Podivná proměnná, sám přesně nevím, jak funguje, souvisí spřeskakováním řádků u funkce if, prosím nepoužívat. Měla by fungovat tak, že pokud nastavíte b na 1, jeden řádek se přeskočí
+
+```c, d, e, f``` – Proměnné volné k použití.
+
 ```x, y``` jsou speciální, určují pozici pixelu.
+
 Přiřazení probíhá následovně:
 ```a=(funkce, nebo proměnná)```, například: ```a=b```, nebo ```a=sin(x)```
 
@@ -30,14 +34,25 @@ Pozitivní hodnoty v hranatých závorkách nemají úplně smysl, počítalo by
 
 ### Matematické funkce
 ```sin()``` –Funkce sinus
+
 ```cos()``` –Funkce cosinus
+
 ```tan()``` –funkce tangens
+
 ```cotg()``` –Funkce kotangens
+
 ```sgn()``` –Funkce signum
-if: Jedna z funkcí na kterou jsem obzvlášť pyšný je umožnění zpracovávání podmínek. Funguje následovně:
-if(výrok) kdy pokud je výrok pravda, vykoná se JEDEN následující řádek. Pokud výrok není pravda, řádek se přeskočí. Typy výroků: == <= >= != < >
+
+### Podmínky
+Jedna z funkcí na kterou jsem obzvlášť pyšný je umožnění zpracovávání podmínek. Funguje následovně:
+if(výrok) kdy pokud je výrok pravda, vykoná se JEDEN následující řádek. Pokud výrok není pravda, řádek se přeskočí.
+
+Typy výroků: ```== <= >= != < >```
+
 Poznámka: nechávejte mezeru mezi proměnnou a operátorem, aby si program nemyslel, že chcete přiřazovat proměnnou:
+
 ```if(a==x)``` –Špatně
+
 ```if(a == x)``` –Správně
 
 ### Počítání
