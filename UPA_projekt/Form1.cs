@@ -114,7 +114,7 @@ namespace UPA_projekt
             Stopwatch sw = new Stopwatch();//stopky na mereni rychlosti
             pxCount = 0;
             pxCountTotal = rozliseniX * rozliseniY;
-            bmp = new double[rozliseniX, rozliseniY];
+            bmp = new double[rozliseniX+1, rozliseniY+1];
             RozliseniXint = rozliseniX;
             RozliseniYint = rozliseniY;
             for (int drawx = 0; drawx <= rozliseniX - 1; drawx++)//radek po radku
